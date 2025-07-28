@@ -14,10 +14,10 @@ from telethon.tl.types import (
 # 🔐 Вставь свои значения
 api_id = 24076122
 api_hash = '9a51ca0ccf68fc8752eddbf709d8b25c'
-session_name = 'parser/session_maxim'
+session_name = 'session_maxim'
 
-CHANNELS_FILE = 'parser/channels.json'
-MEDIA_FOLDER = 'parser/downloaded_media'
+CHANNELS_FILE = 'channels.json'
+MEDIA_FOLDER = 'downloaded_media'
 
 # 📅 Автоматически выбираем вчерашнюю дату
 TARGET_DATE = (datetime.now() - timedelta(days=1)).date()
