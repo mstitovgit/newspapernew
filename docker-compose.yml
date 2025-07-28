@@ -13,4 +13,4 @@ services:
       cd ../ &&\
       prince -s generated/style/style.css -s generated/style/fonts.css generated/output.html -o generated/output.pdf && \
       cd sender &&
-      node sender/send.js"
+      node send.js"
