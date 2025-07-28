@@ -1,4 +1,3 @@
-let counter = 0;
 const postTemplates = {
   posttextshort: `
  <div class="post post_short post_text">
@@ -81,6 +80,7 @@ const nextFont = createCyclicShuffler(fonts);
 const fs = require("fs");
 const path = require("path");
 const { JSDOM } = require("jsdom");
+const { default: twemoji } = require("twemoji");
 
 const posts = JSON.parse(fs.readFileSync("../parser/posts.json", "utf-8"));
 
