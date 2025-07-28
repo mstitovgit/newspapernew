@@ -21,16 +21,18 @@ const transporter = nodemailer.createTransport({
 
 (async () => {
   const info = await transporter.sendMail({
-    from: '"Максим Газета" <mstitov@inbox.ru>',
-    to: "mstitov.mail@gmail.com, mstitov.mail_lHtRlP@kindle.com",
-    text: "",
+    from: '<mstitov@inbox.ru>',
+    to: "mstitov.mail_lHtRlP@kindle.com",
+    text: "gazeta",
     attachments: [
       {
-        filename: `${name}.pdf`,
+        filename:`${name}.pdf`,
         path: "../generated/output.pdf", // путь к файлу
         contentType: "application/pdf",
+        contentDisposition: "attachment",
       },
     ],
+     html:'<div dir="auto"></div>'
   });
 
   console.log("✅ Письмо отправлено:", info.messageId);
