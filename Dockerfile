@@ -26,9 +26,13 @@ RUN npm install
 # RUN pip install -r requirements.txt
 
 # Команда, которая будет выполнена при запуске контейнера
-CMD bash -c "python3 parser/parse_channels.py && \
-             node scripts/generate-html.js && \
-             prince -s generated/style/style.css -s generated/style/fonts.css generated/output.html -o generated/output.pdf && \
-             node sender/send.js"
+CMD bash -c "cd parser && \
+    python3 parse_channels.py && \
+    cd ../ &&\
+    cd scripts &&\
+    node generate-html.js && \
+    cd ../ &&\
+    prince -s generated/style/style.css -s generated/style/fonts.css generated/output.html -o generated/output.pdf && \
+    cd sender &&\
+    node sender/send.js"
 
-             
