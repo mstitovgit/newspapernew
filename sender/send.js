@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 (async () => {
   const info = await transporter.sendMail({
     from: '"Максим Газета" <mstitov@inbox.ru>',
-    to: "mstitov.mail_lHtRlP@kindle.com",
+    to: "mstitov.mail@gmail.com, mstitov.mail_lHtRlP@kindle.com",
     text: "",
     attachments: [
       {
