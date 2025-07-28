@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
     attachments: [
       {
         filename: `${name}.pdf`,
-        path: "./generated/output.pdf", // путь к файлу
+        path: "../generated/output.pdf", // путь к файлу
         contentType: "application/pdf",
       },
     ],
