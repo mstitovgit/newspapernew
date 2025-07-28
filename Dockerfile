@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y python3 python3-pip curl gnupg2
 
 # Установка PrinceXML
-RUN curl -L https://www.princexml.com/download/prince_15.1-1_debian11_amd64.deb -o prince.deb && \
+RUN curl -L https://www.princexml.com/download/prince_16.1-1_debian11_amd64.deb -o prince.deb && \
     apt install -y ./prince.deb && \
     rm prince.deb
 
