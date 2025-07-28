@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsdom": "^26.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}

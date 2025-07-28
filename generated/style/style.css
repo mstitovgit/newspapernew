@@ -1,0 +1,347 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a{
+  color: #222;
+  text-decoration: none;
+}
+
+
+.post_letter {
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  font-size: 440px;
+  text-transform: uppercase;
+  break-after: avoid;
+}
+
+
+.christmas{
+  font-family: "Christmas", sans-serif;
+  
+    margin-bottom: -20px;
+  line-height: 100%;
+}
+.druzhok{
+  font-family: "DRUZHOK", sans-serif;
+  margin-top: 55px;
+    margin-bottom: -34px;
+  line-height: 75%;
+}
+
+.druzhok.dletter{
+  margin-bottom: 40px;
+  margin-left: 66px;
+}
+
+.lenora{
+  font-family: "Lenora", sans-serif;
+  margin-bottom: -35px;
+  margin-top: 25px;
+  line-height: 75%;
+}
+
+.lenora.dletter{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.lighthaus{
+  font-family: "Lighthaus", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 75%;
+}
+
+.lighthaus.dletter{
+  margin-bottom: 75px;
+}
+
+
+.playfairDisplay{
+  font-family: "PlayfairDisplay", sans-serif;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  line-height: 75%;
+}
+.playfairDisplay.dletter{
+  margin-bottom: 95px;
+}
+
+.romile{
+  font-family: "Romile", sans-serif;
+  line-height: 72%;
+  margin-top: 30px;
+}
+
+.romile.dletter{
+  margin-bottom: 20px;
+}
+
+.post_headline{
+  orphans: 2;
+  widows: 2;
+  break-after: avoid;
+}
+
+@page {
+  size: 2580px 3508px;
+  margin: 120px 40px 90px;
+}
+
+@page :first {
+  margin: 260px 40px 120px;
+}
+
+@page :first {
+  @top-center {
+    content: element(header);
+  }
+}
+
+@page {
+  @top-center {
+    content: element(headersmall);
+  }
+}
+
+.header_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header_small {
+  position: running(headersmall);
+}
+
+.header_big {
+  position: running(header);
+}
+
+.newspaper_name {
+  position: relative;
+  font-family: "Bodoni";
+  font-size: 244px;
+  font-weight: 600;
+  line-height: 75%;
+  border-bottom: #222 6px solid;
+  padding-bottom: 16px;
+}
+
+.newspaper_name::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px; /* толщина линии */
+  background: #222; /* или свой цвет */
+
+}
+
+.header_asside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.asside_text {
+  font-family: "Bodoni";
+  text-transform: uppercase;
+  font-size: 40px;
+  /* font-weight: bold; */
+  line-height: 72%;
+}
+
+.subheader {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+  justify-content: center;
+}
+
+.subheader_name {
+  font-family: "Imbue";
+  font-variation-settings: "opsz" 100;
+  font-size: 64px;
+  line-height: 75%;
+}
+
+.footerq {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+
+}
+
+.footer {
+  position: running(titleRunning);
+}
+
+.footer_paginator::after {
+  content: counter(page);
+}
+
+.pagedjs_page .pagedjs_margin-top-center > .pagedjs_margin-content > * {
+  display: flex;
+}
+
+@page {
+  @bottom-center {
+    content: element(titleRunning);
+  }
+}
+
+.content {
+
+  column-count: 2;
+  column-gap: 80px;
+  /* column-rule: 0.2pt solid black; */
+    text-align: justify;
+}
+
+.category {
+  text-transform: uppercase;
+  break-after: avoid;
+  break-inside: avoid;
+  display: flex;
+  padding: 20px;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+  font-family: "Imbue";
+  font-variation-settings: "opsz" 100;
+  font-size: 128px;
+  line-height: 75%;
+  break-after: avoid;
+}
+
+.post {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+  border-bottom: #222 2px solid;
+}
+
+.post_info {
+  display: flex;
+  justify-content: space-between;
+break-inside: avoid;
+}
+
+.post_info_big {
+  justify-content: end;
+  padding-top:40px;
+
+}
+
+.post_info_text {
+  font-family: "Bodoni Book";
+  font-weight: normal;
+ 
+
+}
+
+.post_info_text_small {
+  font-size: 30px;
+}
+
+.post_info_text_big {
+  font-family: "Bodoni Book Italic";
+  letter-spacing: 2%;
+  font-size: 56px;
+  font-style: italic;
+  padding-top: 40px;
+}
+
+.post_headline {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 52px;
+}
+
+.post_headline_big {
+  font-size: 68px;
+}
+
+/* img {
+  width: 100%;
+} */
+
+.post_image_container {
+  display: flex;
+  gap: 20px;
+  /* break-after: avoid; */
+}
+
+.post_image_container-small {
+  height: 300px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.post_image_container-small img {
+  height: 100%;
+  
+}
+
+.post_image_container-big {
+flex-direction: column;
+gap: 40px;
+
+}
+
+.post_image_container-big img {
+  width: 100%;
+}
+
+:not(.post_full) .post_image_container-big > *:not(:first-child){
+  display: none;
+}
+
+:not(.post_full) .post_image_container-big > :first-child{
+  max-height: 1600px;
+  object-fit: cover;
+}
+
+.post_full .post_image_container-big > *:not(:first-child){
+  display: block;
+}
+
+.post_image{
+  object-fit: cover;
+  object-position: top;
+  max-height: 1600px;
+  /* max-height: 1600px; */
+  /* height: 100%;
+  width: min-content;
+  max-height: 1600px;
+  break-inside: avoid; */
+}
+
+
+
+.post_short{
+  break-inside: avoid;
+}
+.post_full {
+  /* break-inside: unset; */
+  gap: 20px;
+  /* padding-top: 40px; */
+}
+
+
+
+

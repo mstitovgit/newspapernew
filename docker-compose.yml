@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  newspaper:
+    build: .
+    volumes:
+      - ./parser/session_maxim.session:/app/parser/session_maxim.session
+    command: >
+      bash -c "
+      python3 parser/parse_channels.py &&
+      node scripts/generate-html.js &&
+      prince -s generated/style/style.css -s generated/style/fonts.css generated/output.html -o generated/output.pdf &&
+      node sender/send.js"
