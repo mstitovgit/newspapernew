@@ -12,6 +12,10 @@ RUN curl -L https://www.princexml.com/download/prince_15.1-1_debian11_amd64.deb 
 
 # Установка зависимостей проекта
 WORKDIR /app
+
+COPY parser/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
 # Установка Node зависимостей
