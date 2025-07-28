@@ -5,10 +5,13 @@ FROM node:18-bullseye
 RUN apt-get update && \
     apt-get install -y python3 python3-pip curl gnupg2
 
+RUN apt-get update  && \
+    apt-get install msttcorefonts
+
 # Установка emoji-шрифта
 RUN apt-get update && \
     apt-get install -y fonts-noto-color-emoji fontconfig
-    
+
 # Установка PrinceXML
 RUN curl -L https://www.princexml.com/download/prince_16.1-1_debian11_amd64.deb -o prince.deb && \
     apt install -y ./prince.deb && \
