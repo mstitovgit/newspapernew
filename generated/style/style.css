@@ -6,7 +6,29 @@ a{
   color: #222;
   text-decoration: none;
 }
+.categoryheadline{
+  text-transform: uppercase;
+  font-family: "Imbue";
+  font-variation-settings: "opsz" 100;
+  font-size: 128px;
+  line-height: 75%;
+  margin-inline:0;
+  margin-block: 0;
+  font-weight: unset;
+}
 
+.arrowlink{
+  display: inline-block;
+  background-image: url('../arrow.svg');
+  background-size: contain;
+      background-repeat: no-repeat;
+      width: 90px;
+      height: 60px;
+  vertical-align: middle;
+
+  margin-left: 10px;
+  margin-right: 20px;
+}
 
 .post_letter {
   display: flex;

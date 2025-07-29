@@ -1,6 +1,6 @@
 const postTemplates = {
   posttextshort: `
- <div class="post post_short post_text">
+ <div class="post post_short post_text" id="back-to-{{id}}">
    <div class="post_info">
      <p class="post_info_text post_info_text_small post_info_time">{{time}}</p>
      <p class="post_info_text post_info_text_small post_info_source">{{source}}</p>
@@ -9,7 +9,7 @@ const postTemplates = {
  </div>
 `,
   posttextaccent: `
-<div class="post post_short post_text post_accent">
+<div class="post post_short post_text post_accent id="back-to-{{id}}">
     <div class="post_info">
       <p class="post_info_text post_info_text_small post_info_time">{{time}}</p>
       <p class="post_info_text post_info_text_small post_info_source">{{source}}</p>
@@ -20,13 +20,13 @@ const postTemplates = {
   posttextfull: `
 <div class="post post_full post_text" id="{{id}}">
     <div class="post_letter"><p class="{{fontclass}}">{{letter}}</p></div>
-    <p class="post_headline post_headline_big">{{text}}</p>
+    <p class="post_headline post_headline_big"><a href="#back-to-{{id}}"><span class="arrowlink"></span></a>{{text}}</p>
     <div class="post_info post_info_big">
      <p class="post_info_text post_info_text_full post_info_text_big">Published at {{time}} by {{source}}</p>
     </div>
   </div>`,
   postimageshort: `
-<div class="post post_short post_image">
+<div class="post post_short post_image" id="back-to-{{id}}">
     <div class="post_info">
       <p class="post_info_text post_info_text_small post_info_time">{{time}}</p>
       <p class="post_info_text post_info_text_small post_info_source">{{source}}</p>
@@ -36,7 +36,7 @@ const postTemplates = {
     </div></a>
   </div>`,
   postimageaccent: `
-<div class="post post_short post_image post_accent">
+<div class="post post_short post_image post_accent" id="back-to-{{id}}">
    <a href="#{{id}}"> <div class="post_image_container post_image_container-big">
       {{media}}
     </div></a>
@@ -50,11 +50,12 @@ const postTemplates = {
     <div class="post_image_container post_image_container-big">
       {{media}}
     </div>
+    <a href="#back-to-{{id}}"><span class="arrowlink"></span></a>
     <div class="post_info post_info_big">
       <p class="post_info_text post_info_text_full post_info_text_big">Published at {{time}} by {{source}}</p>
     </div>
   </div>`,
-  postimagetextaccent: `<div class="post post_short post_imagetext post_accent">
+  postimagetextaccent: `<div class="post post_short post_imagetext post_accent" id="back-to-{{id}}">
     <div class="post_image_container post_image_container-big">
       {{media}}
     </div>
@@ -68,7 +69,7 @@ const postTemplates = {
     <div class="post_image_container post_image_container-big">
       {{media}}
     </div>
-    <p class="post_headline post_headline_big">{{text}}</p>
+    <p class="post_headline post_headline_big"><a href="#back-to-{{id}}"><span class="arrowlink"></span></a>{{text}}</p>
     <div class="post_info post_info_big">
       <p class="post_info_text post_info_text_full post_info_text_big">Published at {{time}} by {{source}}</p>
     </div>
@@ -80,7 +81,6 @@ const nextFont = createCyclicShuffler(fonts);
 const fs = require("fs");
 const path = require("path");
 const { JSDOM } = require("jsdom");
-
 
 const posts = JSON.parse(fs.readFileSync("../parser/posts.json", "utf-8"));
 
@@ -160,7 +160,7 @@ function createHeaderForCategory(category, category_name) {
   const headerForCategory = document.createElement("div");
   headerForCategory.classList = `header${category}`;
   headerForCategory.innerHTML = `
-<div class="category">${category_name}</div>`;
+<div class="category"><h2 class="categoryheadline">${category_name}</h2></div>`;
   document.body.prepend(headerForCategory);
 }
 
@@ -192,7 +192,7 @@ function createCyclicShuffler(arr) {
     if (pool.length === 0) {
       pool = [...arr];
       // Убираем прошлый, чтобы он не повторился
-      pool = pool.filter(item => item !== last);
+      pool = pool.filter((item) => item !== last);
     }
 
     // Выбираем случайный индекс
@@ -205,7 +205,7 @@ function createCyclicShuffler(arr) {
 
 function createPostFromTemplate(id, data) {
   data.fontclass = nextFont();
- 
+
   if (data.letter.toUpperCase() === "Д") {
     data.fontclass += " dletter";
   } else if (data.letter.toUpperCase === "Й") {
@@ -253,7 +253,7 @@ function createShortlyPost(post, index) {
   const hasText = post.text !== "";
   const hasMedia = post.media.length;
 
-  if ((index < 16 &&( index === 4 || index === 8 || index === 12 || index === 15)) || (index >=16 && (index - 15) % 13 === 12)) {
+  if ((index < 16 && (index === 4 || index === 8 || index === 12 || index === 15)) || (index >= 16 && (index - 15) % 13 === 12)) {
     if (hasMedia && hasText) {
       id += "imagetextaccent";
     } else if (hasMedia && !hasText) {

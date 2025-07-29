@@ -1,23 +1,8 @@
 [
   {
-    "category": "news",
-    "category_name": "news",
-    "channels": ["@moscowach", "@sotaproject", "@bazabazon", "@mediazzzona", "@bloodysx"]
-  },
-  {
-    "category": "art",
-    "category_name": "art",
-    "channels": ["@earthvision", "@lookon", "@cjphotographer", "@WorldVintage"]
-  },
-  {
-    "category": "stars",
-    "category_name": "bogema",
-    "channels": ["@whrmedia", "@energy_of_music", "@cliquechanne", "@netflixandchillll"]
-  },
-  {
-    "category": "opinions",
-    "category_name": "opinion",
-    "channels": ["@miLOHin228", "@alfedovgroup", "@istominakarina", "@tagirkaaz", "@eschulmann"]
+    "category": "gay",
+    "category_name": "gay",
+    "channels": ["@sasasassasasaa", "@resolove", "@sasasasasasaaasa"]
   },
   {
     "category": "fun",
@@ -25,9 +10,24 @@
     "channels": ["@brand_horse"]
   },
   {
-    "category": "gay",
-    "category_name": "gay",
-    "channels": ["@sasasassasasaa", "@resolove", "@sasasasasasaaasa"]
+    "category": "opinions",
+    "category_name": "opinion",
+    "channels": ["@miLOHin228", "@alfedovgroup", "@istominakarina", "@tagirkaaz", "@eschulmann"]
+  },
+  {
+    "category": "stars",
+    "category_name": "bogema",
+    "channels": ["@whrmedia", "@energy_of_music", "@cliquechanne", "@netflixandchillll"]
+  },
+  {
+    "category": "art",
+    "category_name": "art",
+    "channels": ["@earthvision", "@lookon", "@cjphotographer", "@WorldVintage"]
+  },
+
+  {
+    "category": "news",
+    "category_name": "news",
+    "channels": ["@moscowach", "@sotaproject", "@bazabazon", "@mediazzzona", "@bloodysx"]
   }
- 
 ]

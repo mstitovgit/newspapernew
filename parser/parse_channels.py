@@ -117,7 +117,7 @@ async def main():
                                     is_video = True
 
                             if is_video:
-                                print('video skipped')
+                                pass
                                 # if msg.media.document.thumbs:
                                 #     thumb_obj = msg.media.document.thumbs[0]
                                 #     thumb_path = os.path.join(MEDIA_FOLDER, f"{msg.id}_thumb.jpg")
@@ -142,7 +142,7 @@ async def main():
                         'views': views,
                     }
 
-                    all_posts.append(post)
+                    all_posts.insert(0, post)
 
                 offset_id = messages[-1].id
 
