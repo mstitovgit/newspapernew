@@ -129,7 +129,6 @@ async def main():
                                     media_files.append(media_path)
 
                     post = {
-                        'isVideo': is_video,
                         'category': category,
                         'category_name': category_name,
                         'channel': channel_username,
