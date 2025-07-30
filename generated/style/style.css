@@ -111,7 +111,7 @@ a{
 
 @page {
   size: 2580px 3508px;
-  margin: 120px 40px 90px;
+  margin: 170px 40px 90px;
 }
 
 @page :first {
@@ -280,7 +280,7 @@ break-inside: avoid;
 }
 
 .post_info_text_small {
-  font-size: 30px;
+  font-size: 48px;
 }
 
 .post_info_text_big {
