@@ -125,8 +125,10 @@ async def main():
                                 #     thumb = thumb_path
                             else:
                                 media_path = await msg.download_media(file=os.path.join(MEDIA_FOLDER, ''))
-                                if media_path:
-                                    media_files.append(media_path)
+                                if media_path and not media_path.endswith(('.mp4', '.MP4')):
+                                 media_files.append(media_path)
+                                else:
+                                 print(f"⚠️ Файл с расширением видео проигнорирован: {media_path}")
 
                     post = {
                         'category': category,
