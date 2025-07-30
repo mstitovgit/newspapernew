@@ -19,15 +19,15 @@ a{
 
 .arrowlink{
   display: inline-block;
-  background-image: url('../arrow.svg');
+  background-image: url('../arrow.png');
   background-size: contain;
       background-repeat: no-repeat;
-      width: 90px;
-      height: 60px;
+      width: 100px;
+      height: 50px;
   vertical-align: middle;
 
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-left: 0px;
+  margin-right: 40px;
 }
 
 .post_letter {
@@ -265,8 +265,10 @@ break-inside: avoid;
 }
 
 .post_info_big {
+  padding-bottom: 20px;
   justify-content: end;
   padding-top:40px;
+  border-bottom: #222 2px solid;
 
 }
 
@@ -291,11 +293,11 @@ break-inside: avoid;
 
 .post_headline {
   font-family: "Times New Roman", 'Noto Color Emoji', serif;
-  font-size: 52px;
+  font-size: 70px;
 }
 
 .post_headline_big {
-  font-size: 68px;
+  font-size: 70px;
 }
 
 /* img {
@@ -359,6 +361,7 @@ gap: 40px;
   break-inside: avoid;
 }
 .post_full {
+  border-bottom: none;
   /* break-inside: unset; */
   gap: 20px;
   /* padding-top: 40px; */

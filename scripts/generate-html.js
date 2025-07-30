@@ -347,7 +347,7 @@ function truncate(str, max) {
   return str.length <= max ? str : str.slice(0, max) + "...";
 }
 
-function trimText(text, maxLength = 130) {
+function trimText(text, maxLength = 140) {
   if (text.length <= maxLength) return text;
 
   const trimmed = text.slice(0, maxLength);
