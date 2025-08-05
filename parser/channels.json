@@ -5,9 +5,9 @@
     "channels": ["@sasasassasasaa", "@resolove", "@sasasasasasaaasa"]
   },
   {
-    "category": "fun",
-    "category_name": "just for fun",
-    "channels": ["@brand_horse"]
+    "category": "study",
+    "category_name": "study",
+    "channels": ["@designersdigestbot", "@easy_javascript_ru", "@yandexforbackend", "@FrontendPortal"]
   },
   {
     "category": "opinions",
@@ -15,19 +15,14 @@
     "channels": ["@miLOHin228", "@alfedovgroup", "@istominakarina", "@tagirkaaz", "@eschulmann"]
   },
   {
+    "category": "art",
+    "category_name": "art",
+    "channels": ["@earthvision", "@lookon", "@cjphotographer", "@saaesthetics", "@WorldVintage"]
+  },
+  {
     "category": "stars",
     "category_name": "bogema",
     "channels": ["@whrmedia", "@energy_of_music", "@cliquechanne", "@netflixandchillll"]
-  },
-  {
-    "category": "art",
-    "category_name": "art",
-    "channels": ["@earthvision", "@lookon", "@cjphotographer", "@WorldVintage"]
-  },
-
-  {
-    "category": "news",
-    "category_name": "news",
-    "channels": ["@moscowach", "@sotaproject", "@bazabazon", "@mediazzzona", "@bloodysx"]
   }
+ 
 ]

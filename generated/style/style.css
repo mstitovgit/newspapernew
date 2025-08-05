@@ -336,7 +336,7 @@ gap: 40px;
 }
 
 :not(.post_full) .post_image_container-big > :first-child{
-  max-height: 1600px;
+  max-height: 1500px;
   object-fit: cover;
 }
 
@@ -347,7 +347,7 @@ gap: 40px;
 .post_image{
   object-fit: cover;
   object-position: top;
-  max-height: 1600px;
+  max-height: 1500px;
   /* max-height: 1600px; */
   /* height: 100%;
   width: min-content;
